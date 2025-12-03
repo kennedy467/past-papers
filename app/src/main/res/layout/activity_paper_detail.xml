@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Title Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/purple_700">
+
+        <TextView
+            android:id="@+id/paperImageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paper Title"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/paperImageInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Unit Code • Year • Type"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Loading Layout -->
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loadingProgressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/loadingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading paper image..."
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Error Layout -->
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Error loading paper"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone" />
+
+    <!-- Image Scroll View (Content) -->
+    <RelativeLayout
+        android:id="@+id/imageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/paperImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black" />
+
+        <!-- Navigation Buttons -->
+        <LinearLayout
+            android:id="@+id/navigationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#88000000">
+
+            <Button
+                android:id="@+id/prevButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="◄ Previous"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/purple_500" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Next ►"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/purple_500" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

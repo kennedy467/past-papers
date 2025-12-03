@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "809211340802",
+    "project_id": "universityapp-b892e",
+    "storage_bucket": "universityapp-b892e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809211340802:android:9412fe2b106042c353df1b",
+        "android_client_info": {
+          "package_name": "com.ken.UniversityApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ8puTPEfo_isFfQIqkbynFZqfS9MKbok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

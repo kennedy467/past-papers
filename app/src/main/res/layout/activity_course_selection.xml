@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="🔍"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search courses..."
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:background="@null"
+            android:padding="8dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Courses List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coursesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
